@@ -13,9 +13,9 @@ const Sequelize = require('sequelize');
 // const pool = mysql.createPool(dbConfig).promise();
 // module.exports = pool;
 
-const conn = new Sequelize('idu_node_db', 'swkwon', 'Ssang1949!', {
+const conn = new Sequelize('idu_node_db', 'root', '', {
     dialect: 'mysql',
-    host: '127.0.0.1'
+    host: '18.191.19.14'
 });
 
 function connect() {

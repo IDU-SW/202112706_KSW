@@ -25,6 +25,7 @@ exports.getAllProducts = (req, res) => {
 exports.createProduct = async (req, res) => {
     const name = req.body.name;
     const price = req.body.price;
+    const carrier = req.body.carrier;
     let typeId = req.body.typeId;
 
     if(!name || !price) {
@@ -39,12 +40,14 @@ exports.createProduct = async (req, res) => {
     try {
         const ret = await product.create({
             name: name,
-            price: price
+            price: price,
+            carrier: carrier
         }, {logging: false});
 
         const result = {
             "name": name,
             "price": price,
+            "carrier": carrier,
             "type_id": typeId
         }
 

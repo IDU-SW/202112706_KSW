@@ -20,6 +20,7 @@ const Product = conn.define('product', {
         },
     name: Sequelize.STRING,
     price: Sequelize.STRING,
+    carrier: Sequelize.STRING
 }, {timestamps: true});
 
 async function initType() {
